@@ -3,22 +3,27 @@ library(shiny)
 
 #Define UI widgets/variables here
 tab1 <- tabPanel(
-  "Introduction" #The tab name
+  "Introduction", #The tab name
+  
   )
 tab2 <- tabPanel(
-  "Interactive 1" #The tab name
+  "Interactive Data 1", #The tab name
+  
 )
 
 tab3 <- tabPanel(
-  "Interactive 2" #The tab name
+  "Interactive Data 2", #The tab name
+  
 )
 
 tab4 <- tabPanel(
-  "Interactive 3" #The tab name
+  "Interactive Data 3", #The tab name
+  
 )
 
 tab5 <- tabPanel(
-  "Summary and Conclusion" #The tab name
+  "Summary and Conclusion", #The tab name
+  
 )
 
 #The UI Display Section (Add widgets/variables here)
