@@ -5,9 +5,10 @@ library(shiny)
 tab1 <- tabPanel(
   "Introduction", #The tab name
   h1("The Recent News"),
-  p("Since the start of the 21st century many things have happened. Take this for example, the Great Recession had 
-  left Americans scrambling for any amount of income they could reach for in 2007 and it has only just ceased two years after
-  it started. Now in 2020 the Covid 19 pandemic has come a long way from China to create a new recession in our country."),
+  p("Since the start of the 21st century many events have taken place in America. 
+  Take this for example, the Great Recession had left Americans scrambling for any amount of income they could 
+  reach for in 2007 and it has only just ceased two years after it started. Now in 2020 the Covid 19 pandemic has come 
+    a long way from China to create a new recession in our country."),
   h1("The Point"),
   p("With so many events that have happened since the 2000s started, there comes the question about how these events
     affect businesses and their stocks. Between small and large businesses there needs to be an understanding that during
@@ -15,10 +16,18 @@ tab1 <- tabPanel(
     smaller businesses will require more help than large businesses, therefore large businesses should not be getting too much
     during those times as they will alway sbe ready to spring back when the time is right, unlike smaller businesses."),
   h1("Project Goals"),
-  p("With that said, the goal of this project will be to analze the top three most powerful technology companies in the US
-     during harsh economical times in order to determine if they always spring back after every event.")
+  p("With that said, the goal of this project will be to analze the three most powerful technology companies in the US
+     during harsh economical times in order to determine if they will spring back after this pandemic or if they stray from
+     their history."),
+  h1("Data Collection Methods"),
+  p("The companies we've decided to choose for our project are Microsoft, Amazon, and Apple. The reason for this is because
+     they are all reputable companies inside or related to the technology industry in some way. 
+     In order to gather our data for this project we've decided to use datasets from Yahoo Finances that were powered by one of
+     America's biggest stock exchanges Nasdaq."),
+  img("Example", "../Stock Market Evalution/nasdaq_logo.png")
   
   )
+
 tab2 <- tabPanel(
   "Interactive Data 1", #The tab name
   
