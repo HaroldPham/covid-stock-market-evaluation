@@ -18,10 +18,10 @@ tab1 <- tabPanel(
     affect businesses and their stocks. Between small and large businesses there needs to be an understanding that during
     a disasterous event smaller businesses will tend to be on the line of failure compared to larger businesses. In general,
     smaller businesses will require more help than large businesses, therefore large businesses should not be getting too much
-    during those times as they will alway sbe ready to spring back when the time is right, unlike smaller businesses."),
+    attention during those times as they will always be ready to spring back when the time is right, unlike smaller businesses."),
   
   tags$h1("Project Goals"),
-  tags$p("With that said, the goal of this project will be to analze the three most powerful technology companies in the US
+  tags$p("With that said, the goal of this project will be to analyze the three most powerful technology companies in the US
      during harsh economical times in order to determine if they will spring back after this pandemic or if they stray from
      their history."),
   img(src = "https://lh3.googleusercontent.com/proxy/q36JCyOJGpQsl9YoidSpvOeRD_kyvMt9zhqlODFzitwgrBsM9ZmNDhpobfkn0U1joiOyITJ2RpQ_ZQMk-4PCO4kCy6Jy8dxufsENxrbw8Emx2gjUOZSnxOJ6w70ESa9nKBkrcQKbIOU"),
