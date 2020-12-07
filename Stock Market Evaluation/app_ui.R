@@ -1,5 +1,7 @@
 #Load your packages here
+library(dplyr)
 library(shiny)
+library(plotly)
 
 #Define UI widgets/variables here
 tab1 <- tabPanel(
@@ -40,8 +42,48 @@ tab1 <- tabPanel(
   )
 
 tab2 <- tabPanel(
-  "Interactive Data 1", #The tab name
+  "Effects of the Great Recession of 2007-2009 on the Stock Market", #The tab name
+  titlePanel("Did Apple, Amazon, and Microsoft Benefit From The Great Recession 
+             of 2007-2008?"),
+  # create choices for company data
+  data_input <- radioButtons(
+    "company_data", 
+    "Company",
+    choices = c("Amazon", "Apple", "Microsoft"),
+    selected = "Amazon"),
   
+  # create choices for y variable
+  y_recession_input <- selectInput(
+    "y_recession_var",
+    label = "Y Variable",
+    choices = colnames(recession_amazon),
+    selected = "cyl"
+  ),
+  color_recession_input <- selectInput(
+    "recession_color",
+    label = "Color",
+    choices = list("Red" = "red", "Blue" = "blue", "Green" = "green")
+  ),
+  size_recession_input <- sliderInput(
+    "recession_size",
+    label = "Size of point", min = 0.1, max = 1, value = 0.5
+  ),
+  plotlyOutput("recessionPlot"),
+  p(""),
+  p("Given the choice of looking at Amazon, Apple, or Microsoft's stock data,
+    it is easy to see the trends of stock prices during and after the Great
+    Recession of 2007-2009. You can change the y variable to display different
+    variables such as the open and closing prices, the high and low prices for 
+    each day, and more. Throughout exploration of this chart, each of these companies
+    suffered a massive dip in their stock prices at the end of this recession; however,
+    they all had a steady recovery and managed to reach new highs as time increased. 
+    We will never know what would have ocurred if this recession had not happened, 
+    so it is impossible to tell whether or not this recession helped their stock 
+    prices, but they all recovered from the recession with flying colors. Microsoft
+    is the oldest company of the three, and its stock prices reached the same prices
+    as they were before the end of the recession, so from this we can conclude that
+    the recession did not help Microsoft's stock prices, but it did not cause long
+    term losses either.")
 )
 
 tab3 <- tabPanel(
