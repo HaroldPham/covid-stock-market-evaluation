@@ -51,7 +51,7 @@ tab2 <- tabPanel(
   data_input <- radioButtons(
     "company_data", 
     "Company",
-    choices = c("Amazon", "Apple", "Microsoft"),
+    choices = c("Amazon", "Apple", "Microsoft", "All Three"),
     selected = "Amazon"),
   
   # create choices for y variable
@@ -59,12 +59,7 @@ tab2 <- tabPanel(
     "y_recession_var",
     label = "Y Variable",
     choices = colnames(recession_amazon),
-    selected = "cyl"
-  ),
-  color_recession_input <- selectInput(
-    "recession_color",
-    label = "Color",
-    choices = list("Red" = "red", "Blue" = "blue", "Green" = "green")
+    selected = "High"
   ),
   size_recession_input <- sliderInput(
     "recession_size",
@@ -74,7 +69,8 @@ tab2 <- tabPanel(
   p(""),
   p("Given the choice of looking at Amazon, Apple, or Microsoft's stock data,
     it is easy to see the trends of stock prices during and after the Great
-    Recession of 2007-2009. You can change the y variable to display different
+    Recession of 2007-2009. There is the option to choose a specific company, or 
+    all three at once. You can also change the y variable to display different
     variables such as the open and closing prices, the high and low prices for 
     each day, and more. Throughout exploration of this chart, each of these companies
     suffered a massive dip in their stock prices at the end of this recession; however,
