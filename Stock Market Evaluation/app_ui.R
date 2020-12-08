@@ -25,7 +25,7 @@ tab1 <- tabPanel(
   tags$p("With that said, the goal of this project will be to analyze the three most powerful technology companies in the US
      during harsh economical times in order to determine if they will spring back after this pandemic or if they stray from
      their history."),
-  img(src = "https://lh3.googleusercontent.com/proxy/q36JCyOJGpQsl9YoidSpvOeRD_kyvMt9zhqlODFzitwgrBsM9ZmNDhpobfkn0U1joiOyITJ2RpQ_ZQMk-4PCO4kCy6Jy8dxufsENxrbw8Emx2gjUOZSnxOJ6w70ESa9nKBkrcQKbIOU"),
+  img(src = "https://images.assetsdelivery.com/compings_v2/bluebay/bluebay1511/bluebay151100019.jpg"),
   
   tags$h1("Data Collection Methods"),
   tags$p("The companies we've decided to choose for our project are ",a("Microsoft",href = "https://finance.yahoo.com/quote/MSFT/history?period1=1167609600&period2=1604793600&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true")
