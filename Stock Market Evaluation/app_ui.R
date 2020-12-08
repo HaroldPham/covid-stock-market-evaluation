@@ -7,20 +7,21 @@ library(plotly)
 tab1 <- tabPanel(
   "Introduction", #The tab name
   includeCSS("style.css"),
-  tags$h1("The Recent News"),
+  tags$h1("Covid in the Economy"),
+  tags$h2("The Recent News"),
   tags$p("Since the start of the 21st century many events have taken place in America. 
   Take this for example, the Great Recession had left Americans scrambling for any amount of income they could 
   reach for in 2007 and it has only just ceased two years after it started. Now in 2020 the Covid 19 pandemic has come 
     a long way from China to create a new recession in our country."),
   
-  tags$h1("The Point"),
+  tags$h2("The Point"),
   tags$p("With so many events that have happened since the 2000s started, there comes the question about how these events
     affect businesses and their stocks. Between small and large businesses there needs to be an understanding that during
     a disasterous event smaller businesses will tend to be on the line of failure compared to larger businesses. In general,
     smaller businesses will require more help than large businesses, therefore large businesses should not be getting too much
     attention during those times as they will always be ready to spring back when the time is right, unlike smaller businesses."),
   
-  tags$h1("Project Goals"),
+  tags$h2("Project Goals"),
   tags$p("With that said, the goal of this project will be to analyze the three most powerful technology companies in the US
      during harsh economical times in order to determine if they will spring back after this pandemic or if they stray from
      their history."),
@@ -43,7 +44,8 @@ tab1 <- tabPanel(
 
 tab2 <- tabPanel(
   "Effects of the Great Recession of 2007-2009 on the Stock Market", #The tab name
-  titlePanel("Did Apple, Amazon, and Microsoft Benefit From The Great Recession 
+  includeCSS("style.css"),
+  h1("Did Apple, Amazon, and Microsoft Benefit From The Great Recession 
              of 2007-2008?"),
   # create choices for company data
   data_input <- radioButtons(
@@ -88,16 +90,19 @@ tab2 <- tabPanel(
 
 tab3 <- tabPanel(
   "Interactive Data 2", #The tab name
+  includeCSS("style.css"),
   
 )
 
 tab4 <- tabPanel(
   "Interactive Data 3", #The tab name
+  includeCSS("style.css"),
   
 )
 
 tab5 <- tabPanel(
   "Summary", #The tab name
+  includeCSS("style.css"),
   
 )
 
