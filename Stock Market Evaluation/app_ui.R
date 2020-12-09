@@ -5,7 +5,7 @@ library(plotly)
 
 #Define UI widgets/variables here
 tab1 <- tabPanel(
-  "Introduction", #The tab name
+  strong("Introduction"), #The tab name
   includeCSS("style.css"),
   tags$h1("Covid in the Economy"),
   tags$h2("The Recent News"),
@@ -43,7 +43,7 @@ tab1 <- tabPanel(
   )
 
 tab2 <- tabPanel(
-  "Effects of the Great Recession of 2007-2009 on the Stock Market", #The tab name
+  strong("Effects of the Great Recession of 2007-2009 on the Stock Market"), #The tab name
   includeCSS("style.css"),
   h1("Did Apple, Amazon, and Microsoft Benefit From The Great Recession 
              of 2007-2008?"),
@@ -85,19 +85,19 @@ tab2 <- tabPanel(
 )
 
 tab3 <- tabPanel(
-  "Interactive Data 2", #The tab name
+  strong("Interactive Data 2"), #The tab name
   includeCSS("style.css"),
   
 )
 
 tab4 <- tabPanel(
-  "Interactive Data 3", #The tab name
+  strong("Interactive Data 3"), #The tab name
   includeCSS("style.css"),
   
 )
 
 tab5 <- tabPanel(
-  "Summary", #The tab name
+  strong("Summary"), #The tab name
   includeCSS("style.css"),
   
 )

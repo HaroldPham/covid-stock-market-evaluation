@@ -1,5 +1,5 @@
     body {
-        background-color: silver;
+        background-color: rgb(248, 255, 151);
         border-style: ridge;
         font-family: 'Times New Roman', Times, serif;
     }
@@ -15,4 +15,13 @@
 
     p {
         font-size: 16px;
+    }
+    
+    .navbar-default {
+        background-color: #d47800;
+    }
+
+    .navbar-default .navbar-brand{
+        color: rgb(0, 128, 6);
+        font-weight: bolder;
     }
