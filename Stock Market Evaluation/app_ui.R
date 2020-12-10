@@ -5,7 +5,7 @@ library(plotly)
 
 #Define UI widgets/variables here
 tab1 <- tabPanel(
-  "Introduction", #The tab name
+  strong("Introduction"), #The tab name
   includeCSS("style.css"),
   tags$h1("Covid in the Economy"),
   tags$h2("The Recent News"),
@@ -25,7 +25,7 @@ tab1 <- tabPanel(
   tags$p("With that said, the goal of this project will be to analyze the three most powerful technology companies in the US
      during harsh economical times in order to determine if they will spring back after this pandemic or if they stray from
      their history."),
-  img(src = "https://lh3.googleusercontent.com/proxy/q36JCyOJGpQsl9YoidSpvOeRD_kyvMt9zhqlODFzitwgrBsM9ZmNDhpobfkn0U1joiOyITJ2RpQ_ZQMk-4PCO4kCy6Jy8dxufsENxrbw8Emx2gjUOZSnxOJ6w70ESa9nKBkrcQKbIOU"),
+  img(src = "https://images.assetsdelivery.com/compings_v2/bluebay/bluebay1511/bluebay151100019.jpg"),
   
   tags$h1("Data Collection Methods"),
   tags$p("The companies we've decided to choose for our project are ",a("Microsoft",href = "https://finance.yahoo.com/quote/MSFT/history?period1=1167609600&period2=1604793600&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true")
@@ -43,7 +43,7 @@ tab1 <- tabPanel(
   )
 
 tab2 <- tabPanel(
-  "Effects of the Great Recession of 2007-2009 on the Stock Market", #The tab name
+  strong("Effects of the Great Recession of 2007-2009 on the Stock Market"), #The tab name
   includeCSS("style.css"),
   h1("Did Apple, Amazon, and Microsoft Benefit From The Great Recession 
              of 2007-2008?"),
@@ -85,21 +85,29 @@ tab2 <- tabPanel(
 )
 
 tab3 <- tabPanel(
-  "Interactive Data 2", #The tab name
+  strong("Interactive Data 2"), #The tab name
   includeCSS("style.css"),
   
 )
 
 tab4 <- tabPanel(
-  "Interactive Data 3", #The tab name
+  strong("Interactive Data 3"), #The tab name
   includeCSS("style.css"),
   
 )
 
 tab5 <- tabPanel(
-  "Summary", #The tab name
+  strong("Summary"), #The tab name
   includeCSS("style.css"),
-  
+  h1("In Summary"),
+  h2("The Great Recession"),
+  p(),
+  h2("The 2016 Election"),
+  p(),
+  h2("The Covid 19 Pandemic"),
+  p(),
+  h1("Take Aways"),
+  p()
 )
 
 #The UI Display Section (Add widgets/variables here)
