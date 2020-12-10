@@ -66,7 +66,7 @@ tab2 <- tabPanel(
     label = "Size of point", min = 0.1, max = 1, value = 0.5
   ),
   plotlyOutput("recessionPlot"),
-  p(""),
+  h2("Chart Analysis"),
   p("Given the choice of looking at Amazon, Apple, or Microsoft's stock data,
     it is easy to see the trends of stock prices during and after the Great
     Recession of 2007-2009. There is the option to choose a specific company, or 
