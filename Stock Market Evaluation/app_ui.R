@@ -99,7 +99,15 @@ tab4 <- tabPanel(
 tab5 <- tabPanel(
   strong("Summary"), #The tab name
   includeCSS("style.css"),
-  
+  h1("In Summary"),
+  h2("The Great Recession"),
+  p(),
+  h2("The 2016 Election"),
+  p(),
+  h2("The Covid 19 Pandemic"),
+  p(),
+  h1("Take Aways"),
+  p()
 )
 
 #The UI Display Section (Add widgets/variables here)
