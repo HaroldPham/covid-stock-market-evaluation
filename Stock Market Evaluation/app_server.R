@@ -45,30 +45,44 @@ server <- function(input, output) {
       amazon_plot <- ggplot(recession_amazon) +
         geom_point(mapping = aes_string(x = recession_amazon$Date, y = input$y_recession_var), 
                    size = input$recession_size, 
-                   color = input$recession_color) +
+                   color = "orange") +
         aes(text = paste("Company:", Company)) +
-        labs(x = "Year", y = input$y_recession_var, title = title)
+        labs(x = "Year", y = input$y_recession_var, title = title) 
       ggplotly(amazon_plot)
     } else if (input$company_data == "Apple") {
       # Create apple ggplot
       apple_plot <- ggplot(recession_apple) +
         geom_point(mapping = aes_string(x = recession_apple$Date, y = input$y_recession_var), 
                    size = input$recession_size, 
-                   color = input$recession_color) +
+                   color = "blue") +
         aes(text = paste("Company:", Company)) +
         labs(x = "Year", y = input$y_recession_var, title = title)
       ggplotly(apple_plot)
-    } else {
+    } else if (input$company_data == "Microsoft") {
       # Create microsoft ggplot
       microsoft_plot <- ggplot(recession_msoft) +
         geom_point(mapping = aes_string(x = recession_msoft$Date, y = input$y_recession_var), 
                    size = input$recession_size, 
-                   color = input$recession_color) +
+                   color = "red") +
         aes(text = paste("Company:", Company)) +
         labs(x = "Year", y = input$y_recession_var, title = title)
       ggplotly(microsoft_plot)
+    } else if (input$company_data == "All Three") {
+      all_plot <- ggplot() +
+        geom_point(recession_amazon, mapping = aes_string(x = recession_amazon$Date, y = input$y_recession_var), 
+                   size = input$recession_size, 
+                   color = "orange") +
+        geom_point(recession_apple, mapping = aes_string(x = recession_apple$Date, y = input$y_recession_var), 
+                   size = input$recession_size, 
+                   color = "blue") +
+        geom_point(recession_msoft, mapping = aes_string(x = recession_msoft$Date, y = input$y_recession_var), 
+                   size = input$recession_size, 
+                   color = "red") +
+        aes(text = paste("Company:", Company)) +
+        labs(x = "Year", y = input$y_recession_var, title = title)
     }
   })
+<<<<<<< HEAD
 }
 
 server <- function(input, output){
@@ -119,3 +133,6 @@ server <- function(input, output){
   })
 }
   
+=======
+}
+>>>>>>> e50d744e14f77c8355d9323eecce4185acbfaec8

@@ -5,26 +5,27 @@ library(plotly)
 
 #Define UI widgets/variables here
 tab1 <- tabPanel(
-  "Introduction", #The tab name
+  strong("Introduction"), #The tab name
   includeCSS("style.css"),
-  tags$h1("The Recent News"),
+  tags$h1("Covid in the Economy"),
+  tags$h2("The Recent News"),
   tags$p("Since the start of the 21st century many events have taken place in America. 
   Take this for example, the Great Recession had left Americans scrambling for any amount of income they could 
   reach for in 2007 and it has only just ceased two years after it started. Now in 2020 the Covid 19 pandemic has come 
     a long way from China to create a new recession in our country."),
   
-  tags$h1("The Point"),
+  tags$h2("The Point"),
   tags$p("With so many events that have happened since the 2000s started, there comes the question about how these events
     affect businesses and their stocks. Between small and large businesses there needs to be an understanding that during
     a disasterous event smaller businesses will tend to be on the line of failure compared to larger businesses. In general,
     smaller businesses will require more help than large businesses, therefore large businesses should not be getting too much
-    during those times as they will alway sbe ready to spring back when the time is right, unlike smaller businesses."),
+    attention during those times as they will always be ready to spring back when the time is right, unlike smaller businesses."),
   
-  tags$h1("Project Goals"),
-  tags$p("With that said, the goal of this project will be to analze the three most powerful technology companies in the US
+  tags$h2("Project Goals"),
+  tags$p("With that said, the goal of this project will be to analyze the three most powerful technology companies in the US
      during harsh economical times in order to determine if they will spring back after this pandemic or if they stray from
      their history."),
-  img(src = "https://lh3.googleusercontent.com/proxy/q36JCyOJGpQsl9YoidSpvOeRD_kyvMt9zhqlODFzitwgrBsM9ZmNDhpobfkn0U1joiOyITJ2RpQ_ZQMk-4PCO4kCy6Jy8dxufsENxrbw8Emx2gjUOZSnxOJ6w70ESa9nKBkrcQKbIOU"),
+  img(src = "https://images.assetsdelivery.com/compings_v2/bluebay/bluebay1511/bluebay151100019.jpg"),
   
   tags$h1("Data Collection Methods"),
   tags$p("The companies we've decided to choose for our project are ",a("Microsoft",href = "https://finance.yahoo.com/quote/MSFT/history?period1=1167609600&period2=1604793600&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true")
@@ -42,14 +43,15 @@ tab1 <- tabPanel(
   )
 
 tab2 <- tabPanel(
-  "Effects of the Great Recession of 2007-2009 on the Stock Market", #The tab name
-  titlePanel("Did Apple, Amazon, and Microsoft Benefit From The Great Recession 
+  strong("Effects of the Great Recession of 2007-2009 on the Stock Market"), #The tab name
+  includeCSS("style.css"),
+  h1("Did Apple, Amazon, and Microsoft Benefit From The Great Recession 
              of 2007-2008?"),
   # create choices for company data
   data_input <- radioButtons(
     "company_data", 
     "Company",
-    choices = c("Amazon", "Apple", "Microsoft"),
+    choices = c("Amazon", "Apple", "Microsoft", "All Three"),
     selected = "Amazon"),
   
   # create choices for y variable
@@ -57,22 +59,18 @@ tab2 <- tabPanel(
     "y_recession_var",
     label = "Y Variable",
     choices = colnames(recession_amazon),
-    selected = "cyl"
-  ),
-  color_recession_input <- selectInput(
-    "recession_color",
-    label = "Color",
-    choices = list("Red" = "red", "Blue" = "blue", "Green" = "green")
+    selected = "High"
   ),
   size_recession_input <- sliderInput(
     "recession_size",
     label = "Size of point", min = 0.1, max = 1, value = 0.5
   ),
   plotlyOutput("recessionPlot"),
-  p(""),
+  h2("Chart Analysis"),
   p("Given the choice of looking at Amazon, Apple, or Microsoft's stock data,
     it is easy to see the trends of stock prices during and after the Great
-    Recession of 2007-2009. You can change the y variable to display different
+    Recession of 2007-2009. There is the option to choose a specific company, or 
+    all three at once. You can also change the y variable to display different
     variables such as the open and closing prices, the high and low prices for 
     each day, and more. Throughout exploration of this chart, each of these companies
     suffered a massive dip in their stock prices at the end of this recession; however,
@@ -87,6 +85,7 @@ tab2 <- tabPanel(
 )
 
 tab3 <- tabPanel(
+<<<<<<< HEAD
   "Effects from the 2016 Election.", #The tab name
   includeCSS("style.css"),
   h1("During 2016, were there any effects from the 2016 election?"),
@@ -121,16 +120,30 @@ tab3 <- tabPanel(
     term as president of the United States.")
   )
   
+=======
+  strong("Interactive Data 2"), #The tab name
+  includeCSS("style.css"),
+>>>>>>> e50d744e14f77c8355d9323eecce4185acbfaec8
   
 
 tab4 <- tabPanel(
-  "Interactive Data 3", #The tab name
+  strong("Interactive Data 3"), #The tab name
+  includeCSS("style.css"),
   
 )
 
 tab5 <- tabPanel(
-  "Summary", #The tab name
-  
+  strong("Summary"), #The tab name
+  includeCSS("style.css"),
+  h1("In Summary"),
+  h2("The Great Recession"),
+  p(),
+  h2("The 2016 Election"),
+  p(),
+  h2("The Covid 19 Pandemic"),
+  p(),
+  h1("Take Aways"),
+  p()
 )
 
 #The UI Display Section (Add widgets/variables here)
