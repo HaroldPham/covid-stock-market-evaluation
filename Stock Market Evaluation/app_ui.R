@@ -87,9 +87,41 @@ tab2 <- tabPanel(
 )
 
 tab3 <- tabPanel(
-  "Interactive Data 2", #The tab name
+  "Effects from the 2016 Election.", #The tab name
+  includeCSS("style.css"),
+  h1("During 2016, were there any effects from the 2016 election?"),
+
+  Election_input <- sidebarPanel(
+    "company_data",
+    "Company",
+    choices = c("Amazon", "Apple", "Microsoft"),
+    selected= "Amazon"),
+  color_election_input <- selectInput(
+    "election_color",
+    label = "Color",
+    choices = list("Red" = "red", "Blue" = "blue", "Green" = "green")
+  ),
+  plotlyOutput("electionplot"),
+  p(""),
+  p("When we are looking at these three companies of Amazon, Apple, and Microsoft
+    out group was trying to think what observations we can make to do another visualization
+    for our project? It turned out we decided to look at another event that happened 
+    years after the Recession of 2007-08, the answer we came up with was the 2016 
+    Presidential Election between Democratic candidate Hilaryly Clinton and 
+    Republican Candidate Donald Trump. During this year tensions were high from 
+    the stock market heading into the election day, then night when it was 
+    announced that Trump would win the presidency and be the 45th president of 
+    the United States of America. The only company from the three would be considered 
+    the biggest loser of the three was Amazon. Losing about 80 dollars after the
+    second week of the election, but gain its losses back in the matter of months.
+    The saying goes if ifs and buts were candy and nuts we would all have a merry christmas
+    well the if remains what would have happened if Hilarly Clinton were to win the election
+    as so many people were expecting it's hard to judge but for the big these big three marktes,
+    looking at present day of 2020 these three markets did fine after Trump's one and only
+    term as president of the United States.")
+  )
   
-)
+  
 
 tab4 <- tabPanel(
   "Interactive Data 3", #The tab name
