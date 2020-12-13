@@ -25,6 +25,17 @@ recession_msoft <- msoft %>%
 recession_amazon <- amazon %>%
   filter(Date <= "2012-12-31")
 
+## tab 3 Election data interactive tab
+#Data from the year starting in 2016 to January 2017 the day of inauguration.
+
+election_apple <- apple %>%
+  filter(Date >= "2016-01-01" & Date <= "2017-01-20")
+
+election_amazon <- amazon %>%
+  filter(Date >= "2016-01-01" & Date <= "2017-01-20")
+
+election_msoft <- msoft %>%
+  filter(Date >= "2016-01-01" & Date <= "2017-01-20")
 
 server <- function(input, output) {
   # Recession tab 2 plots
@@ -95,6 +106,57 @@ server <- function(input, output) {
     }
     chart2
     })
+
+
+
+
+
+
+  #Election tab 3 plots
+  output$electionplot <- renderPlotly({
+    title <- past0("")
+
+    #Election plots
+    if(input$company_data == "Amazon"){
+      amzn_election_plot <- ggplot(election_amazon) +
+        geom_point(mapping = aes_string(x = election_amazon$Date, y = input$y_election_var),
+                   size = input$election_size,
+                   color = "orange") +
+        aes(text = paste("company:", Company)) +
+        labs(x = "Month", y = input$y_election_var, title = title)
+     ggplotly(amzn_election_plot)
+    } else if(input$company_data == "Apple"){
+       apple_election_plot <- ggplot(election_apple) +
+         geom_point(mapping = aes_string(x = election_apple$Date, y = input$y_election_var),
+                     size = input$election_size,
+                    color = "blue") +
+         aes(text = paste("Company:", Company)) +
+         labs(x = "Month", y = input$y_election_var, title = title)
+       ggplotly(apple_election_plot)
+    } else if(input$company_data == "Micrsoft"){
+       msoft_election_plot <- ggplot(election_msoft) +
+         geom_point(mapping = aes_string(x = election_msoft$Date, y = input$y_election_var),
+                    size = input$election_size,
+                    color = "green")
+       aes(text = paste("Company:", Company)) +
+         labs(x = "Month", y = input@y_election_var, title = title)
+       ggplotly(msoft_election_plot)
+    } else if(input$company_data == "All Three"){
+       all_election_data <- ggplot() +
+         geom_point(mapping = aes_string(x = election_amazon$Date, y = input$y_election_var),
+                    size = input$election_size,
+                    color = "orange") +
+         geom_point(mapping = aes_string(x = election_apple$Date, y = input$y_election_var),
+                    size = input$election_size,
+                    color = "blue") +
+         geom_point(mapping = aes_string(x = election_msoft$Date, y = input$y_election_var),
+                    size = input$election_size,
+                    color = "green") +
+         aes(text = paste("Company:", Company)) +
+         labs(x = "Month", y = input@y_election_var, title = title)
+     }
+
+  })
 
 
 
