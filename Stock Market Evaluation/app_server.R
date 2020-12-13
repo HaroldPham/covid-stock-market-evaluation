@@ -114,7 +114,7 @@ server <- function(input, output) {
 
   #Election tab 3 plots
   output$electionplot <- renderPlotly({
-    title <- past0("")
+    title <- paste0("title")
 
     #Election plots
     if(input$company_data == "Amazon"){

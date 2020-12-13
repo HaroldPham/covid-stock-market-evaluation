@@ -66,7 +66,7 @@ tab2 <- tabPanel(
     label = "Size of point", min = 0.1, max = 1, value = 0.5
   ),
   plotlyOutput("recessionPlot"),
-  p(""),
+  h2("Chart Analysis"),
   p("Given the choice of looking at Amazon, Apple, or Microsoft's stock data,
     it is easy to see the trends of stock prices during and after the Great
     Recession of 2007-2009. There is the option to choose a specific company, or
@@ -85,15 +85,47 @@ tab2 <- tabPanel(
 )
 
 tab3 <- tabPanel(
-  strong("Interactive Data 2"), #The tab name
+  "Effects from the 2016 Election.", #The tab name
   includeCSS("style.css"),
+  h1("During 2016, were there any effects from the 2016 election?"),
+  sidebarPanel(
+    selectInput(
+    "company_data",
+    "Company",
+    choices = c("Amazon", "Apple", "Microsoft"),
+    selected= "Amazon")
+    ),
+  selectInput(
+    "election_color",
+    label = "Color",
+    choices = list("Red" = "red", "Blue" = "blue", "Green" = "green")
+  ),
+  plotlyOutput("electionplot"),
+  p("When we are looking at these three companies of Amazon, Apple, and Microsoft
+    out group was trying to think what observations we can make to do another visualization
+    for our project? It turned out we decided to look at another event that happened
+    years after the Recession of 2007-08, the answer we came up with was the 2016
+    Presidential Election between Democratic candidate Hilaryly Clinton and
+    Republican Candidate Donald Trump. During this year tensions were high from
+    the stock market heading into the election day, then night when it was
+    announced that Trump would win the presidency and be the 45th president of
+    the United States of America. The only company from the three would be considered
+    the biggest loser of the three was Amazon. Losing about 80 dollars after the
+    second week of the election, but gain its losses back in the matter of months.
+    The saying goes if ifs and buts were candy and nuts we would all have a merry christmas
+    well the if remains what would have happened if Hilarly Clinton were to win the election
+    as so many people were expecting it's hard to judge but for the big these big three marktes,
+    looking at present day of 2020 these three markets did fine after Trump's one and only
+    term as president of the United States.")
+  )
 
-)
+
+
+
 
 tab4 <- tabPanel(
   strong("COVID-19 Effects on the Stock Market"), #The tab name
   includeCSS("style.css"),
-
     h1("Question Statement"),
     p("The next question we are asking regarding our data is this: what effect
       did the COVID-19 pandemic have on our three companies. This question is
@@ -128,7 +160,15 @@ tab4 <- tabPanel(
 tab5 <- tabPanel(
   strong("Summary"), #The tab name
   includeCSS("style2.css"),
-
+  h1("In Summary"),
+  h2("The Great Recession"),
+  p(),
+  h2("The 2016 Election"),
+  p(),
+  h2("The Covid 19 Pandemic"),
+  p(),
+  h1("Take Aways"),
+  p()
 )
 
 #The UI Display Section (Add widgets/variables here)
