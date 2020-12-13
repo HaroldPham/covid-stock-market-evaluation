@@ -1,0 +1,12 @@
+name: StockMarketEvaluation
+title: StockMarketEvaluation
+username:
+account: gavinpereira
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 3391393
+bundleId: 3981960
+url: https://gavinpereira.shinyapps.io/StockMarketEvaluation/
+when: 1607847371.47783
+asMultiple: FALSE
+asStatic: FALSE
