@@ -9,26 +9,37 @@ tab1 <- tabPanel(
   includeCSS("style.css"),
   tags$h1("Covid in the Economy"),
   tags$h2("The Recent News"),
-  tags$p("Since the start of the 21st century many events have taken place in America.
-  Take this for example, the Great Recession had left Americans scrambling for any amount of income they could
-  reach for in 2007 and it has only just ceased two years after it started. Now in 2020 the Covid 19 pandemic has come
+  tags$p("Since the start of the 21st century many events have taken place 
+  in America.
+  Take this for example, the Great Recession had left Americans scrambling 
+  for any amount of income they could
+  reach for in 2007 and it has only just ceased two years after it started.
+  Now in 2020 the Covid 19 pandemic has come
     a long way from China to create a new recession in our country."),
 
   tags$h2("The Point"),
-  tags$p("With so many events that have happened since the 2000s started, there comes the question about how these events
-    affect businesses and their stocks. Between small and large businesses there needs to be an understanding that during
-    a disasterous event smaller businesses will tend to be on the line of failure compared to larger businesses. In general,
-    smaller businesses will require more help than large businesses, therefore large businesses should not be getting too much
-    attention during those times as they will always be ready to spring back when the time is right, unlike smaller businesses."),
+  tags$p("With so many events that have happened since the 2000s started, 
+  there comes the question about how these events
+    affect businesses and their stocks. Between small and large businesses 
+    there needs to be an understanding that during
+    a disasterous event smaller businesses will tend to be on the line of 
+    failure compared to larger businesses. In general,
+    smaller businesses will require more help than large businesses, therefore 
+    large businesses should not be getting too much
+    attention during those times as they will always be ready to spring back 
+         when the time is right, unlike smaller businesses."),
 
   tags$h2("Project Goals"),
-  tags$p("With that said, the goal of this project will be to analyze the three most powerful technology companies in the US
-     during harsh economical times in order to determine if they will spring back after this pandemic or if they stray from
+  tags$p("With that said, the goal of this project will be to analyze the three 
+  most powerful technology companies in the US
+     during harsh economical times in order to determine if they will spring 
+     back after this pandemic or if they stray from
      their history."),
   img(src = "https://images.assetsdelivery.com/compings_v2/bluebay/bluebay1511/bluebay151100019.jpg"),
 
   tags$h1("Data Collection Methods"),
-  tags$p("The companies we've decided to choose for our project are ", a("Microsoft", href = "https://finance.yahoo.com/quote/MSFT/history?period1=1167609600&period2=1604793600&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true")
+  tags$p("The companies we've decided to choose for our project are ", 
+         a("Microsoft", href = "https://finance.yahoo.com/quote/MSFT/history?period1=1167609600&period2=1604793600&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true")
     ,", ",a("Apple",href = "https://finance.yahoo.com/quote/AAPL/history?period1=1167609600&period2=1605052800&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true"),
     ", and ",a("Amazon",href = "https://finance.yahoo.com/quote/AMZN/history?period1=1264032000&period2=1603238400&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true"),
     ". The reason for this is because
@@ -43,7 +54,8 @@ tab1 <- tabPanel(
   )
 
 tab2 <- tabPanel(
-  strong("Effects of the Great Recession of 2007-2009 on the Stock Market"), #The tab name
+  strong("Effects of the Great Recession of 2007-2009 on the Stock Market"),
+  #The tab name
   includeCSS("style.css"),
   h1("Did Apple, Amazon, and Microsoft Benefit From The Great Recession
              of 2007-2008?"),
@@ -72,15 +84,24 @@ tab2 <- tabPanel(
     Recession of 2007-2009. There is the option to choose a specific company, or
     all three at once. You can also change the y variable to display different
     variables such as the open and closing prices, the high and low prices for
-    each day, and more. Throughout exploration of this chart, each of these companies
-    suffered a massive dip in their stock prices at the end of this recession; however,
-    they all had a steady recovery and managed to reach new highs as time increased.
-    We will never know what would have ocurred if this recession had not happened,
-    so it is impossible to tell whether or not this recession helped their stock
-    prices, but they all recovered from the recession with flying colors. Microsoft
-    is the oldest company of the three, and its stock prices reached the same prices
-    as they were before the end of the recession, so from this we can conclude that
-    the recession did not help Microsoft's stock prices, but it did not cause long
+    each day, and more. Throughout exploration of this chart, each of these 
+    companies
+    suffered a massive dip in their stock prices at the end of this recession;
+    however,
+    they all had a steady recovery and managed to reach new highs as time 
+    increased.
+    We will never know what would have ocurred if this recession had not
+    happened,
+    so it is impossible to tell whether or not this recession helped their 
+    stock
+    prices, but they all recovered from the recession with flying colors. 
+    Microsoft
+    is the oldest company of the three, and its stock prices reached the 
+    same prices
+    as they were before the end of the recession, so from this we can conclude 
+    that
+    the recession did not help Microsoft's stock prices, but it did not cause 
+    long
     term losses either.")
 )
 
@@ -108,21 +129,32 @@ tab3 <- tabPanel(
   mainPanel(
   plotlyOutput("electionplot"),
   h1("Conclusions"),
-  p("When we are looking at these three companies of Amazon, Apple, and Microsoft
-    our group was trying to think about what observations could be made to do about the datasets for
-    another visualization for our project. It turned out that we decided to look at another event that happened
-    years after the Recession of 2007-08, the answer we came up with was the 2016
+  p("When we are looking at these three companies of Amazon, Apple, and
+  Microsoft
+    our group was trying to think about what observations could be made to 
+    do about the datasets for
+    another visualization for our project. It turned out that we decided to 
+    look at another event that happened
+    years after the Recession of 2007-08, the answer we came up with was the 
+    2016
     Presidential Election between Democratic candidate Hillary Clinton and
     Republican Candidate Donald Trump. During this year tensions were high from
-    the stock market heading into the election day, then when the night came when it was
+    the stock market heading into the election day, then when the night came 
+    when it was
     announced that Trump would win the presidency and be the 45th president of
-    the United States of America. The only company of the three datasets that would be considered
+    the United States of America. The only company of the three datasets that
+    would be considered
     the biggest loss was Amazon, losing about 80 dollars after the
-    second week of the election, but gaining its losses back in a matter of months.
-    The saying goes, 'if ifs and buts were candy and nuts we would all have a merry christmas'
-    well the 'if' remains: What would have happened if Hillary Clinton were to win the election
-    as so many people were expecting it's hard to judge but for these big three markets,
-    looking at present day of 2020 these three markets did fine after Trump's one and only
+    second week of the election, but gaining its losses back in a matter of 
+    months.
+    The saying goes, 'if ifs and buts were candy and nuts we would all have a
+    merry christmas'
+    well the 'if' remains: What would have happened if Hillary Clinton were to
+    win the election
+    as so many people were expecting it's hard to judge but for these big three
+    markets,
+    looking at present day of 2020 these three markets did fine after Trump's 
+    one and only
     term as president of the United States.")
   ))
 
@@ -143,7 +175,8 @@ tab4 <- tabPanel(
       h2("Interactive Plot"),
     fluidRow(
       column(8, offset = 2, align = 'center',
-        h4(strong("Click on a row in the table to highlight it on the graph. Click
+        h4(strong("Click on a row in the table to highlight it on the graph. 
+        Click
           the checkbox to highlight the days that California was under a
           shelter-in-place order."))
       )
@@ -172,7 +205,8 @@ tab4 <- tabPanel(
    during the pandemic, and so they are more likely to have things delivered.
     To summarize, all of our companies showed a positive correlation with the
     number of COVID-19 cases, which should lead us to view this data in context,
-    and examine the people it affects negatively, such as Amazon warehouse workers.")
+    and examine the people it affects negatively, such as Amazon warehouse 
+    workers.")
 
 )
 
@@ -181,40 +215,65 @@ tab5 <- tabPanel(
   includeCSS("style.css"),
   h1("In Summary"),
   h2("The Great Recession"),
-  p("In this part of our analysis we compared our datasets during the time period of 2007 to 2009, which is known as
-     America's largest economic downfall, the Great Recession. Looking at the data for 'highs' in all three datasets, the
-    Great Recession hindered the progression of the stock data and slowed its growth. The struggle of each line is noticeable
+  p("In this part of our analysis we compared our datasets during the time 
+  period of 2007 to 2009, which is known as
+     America's largest economic downfall, the Great Recession. Looking at the
+     data for 'highs' in all three datasets, the
+    Great Recession hindered the progression of the stock data and slowed its 
+    growth. The struggle of each line is noticeable
     up until 2009 when the recession ends. What happens after this event is the
-     key that should be paid attention to, and it is that all the datasets start rising quickly and while Amazon and Apple
-    steadily grow, Microsoft stays in a consistent manner compared to the rest. With that said, it can be noted that these
-    large companies, although having lost much during this recession, have all sprung back to life afterwards starting
+     key that should be paid attention to, and it is that all the datasets start
+     rising quickly and while Amazon and Apple
+    steadily grow, Microsoft stays in a consistent manner compared to the rest.
+    With that said, it can be noted that these
+    large companies, although having lost much during this recession, have all
+    sprung back to life afterwards starting
     immediately after the recession ended, 2009."),
   img(src = "sum1.PNG"),
   img(src = "sum2.PNG"),
   img(src = "sum3.PNG"),
   h2("The 2016 Election"),
-  p("Unlike the last analysis, instead of comparing our datasets to a disastrous event, we've decided to look at what happens
-     when they are compared to a normal upscale event such as the 2016 elections to see if there are any noticeable changes
-     to our stock data and what that says about the companies behind them. In this case it looked like Amazon had large stock
-    market losses at the beginning of the election and proceeded to regain it all back in a matter of months."),
+  p("Unlike the last analysis, instead of comparing our datasets to a disastrous
+  event, we've decided to look at what happens
+     when they are compared to a normal upscale event such as the 2016 elections
+     to see if there are any noticeable changes
+     to our stock data and what that says about the companies behind them. In 
+     this case it looked like Amazon had large stock
+    market losses at the beginning of the election and proceeded to regain it 
+    all back in a matter of months. Amazon is a good
+    example of what larger companies are capable of doing in events such as 
+    these."),
   img(src = "sum4.PNG"),
   h2("The Covid 19 Pandemic"),
-  p("In the case of our current pandemic and isolation, we decided that it was relevant to compare our datasets to the
-  current context of our society. During these times it is important to understand that not all businesses will be capable
-    of thriving or even staying stable. Yet, within our three datasets, it is shown that not only are Amazon, Apple, and
-    Microsoft staying stable through this time, they are also growing steadily. Overall what can be said is that the
-    three large companies have managed to keep themselves well and will most likely keep growing as this pandemic
-    drags on unless if some unforseen tragedies were to happen to them. Compared to smaller businesses that do not have all
-    the resources to support their companies, they would not do as well as larger companies would, which brings the question
+  p("In the case of our current pandemic and isolation, we decided that it was 
+  relevant to compare our datasets to the
+  current context of our society. During these times it is important to 
+  understand that not all businesses will be capable
+    of thriving or even staying stable. Yet, within our three datasets, 
+    it is shown that not only are Amazon, Apple, and
+    Microsoft staying stable through this time, they are also growing 
+    steadily. Overall what can be said is that the
+    three large companies have managed to keep themselves well and will 
+    most likely keep growing as this pandemic
+    drags on unless if some unforseen tragedies were to happen to them. 
+    Compared to smaller businesses that do not have all
+    the resources to support their companies, they would not do as well 
+    as larger companies would, which brings the question
     of who and where should we be allocating our resources to the most?"),
   img(src = "sum5.PNG"),
   h1("Take Aways"),
-  p("All in all, what can be said about large companies comes down to this: During any event, catastrophic or casual, whether
-    they rise or fall or even stay steady, they will always come back after the event with full power and rise. What this
-    whole analysis tells us about smaller companies on the other hand is that with larger companies being so flexible with their
-    rise and falls of stocks, smaller companies may not have that kind of reaction these events, and will most likely be on the
-    falling side. That is why we suggest that the focus during such events should not be allocating resources to larger
-    more renouned companies, but rather the smaller businesses that are making significantly less than them.")
+  p("All in all, what can be said about large companies comes down to this: 
+  During any event, catastrophic or casual, whether
+    they rise or fall or even stay steady, they will always come back after 
+    the event with full power and rise. What this
+    whole analysis tells us about smaller companies on the other hand is that 
+    with larger companies being so flexible with their
+    rise and falls of stocks, smaller companies may not have that kind of 
+    reaction these events, and will most likely be on the
+    falling side. That is why we suggest that the focus during such events 
+    should not be allocating resources to larger
+    more renouned companies, but rather the smaller businesses that are 
+    making significantly less than them.")
 )
 
 
