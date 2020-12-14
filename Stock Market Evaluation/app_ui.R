@@ -78,7 +78,7 @@ tab2 <- tabPanel(
     label = "Size of point", min = 0.1, max = 1, value = 0.5
   ),
   plotlyOutput("recessionPlot"),
-  h2("Chart Analysis"),
+  h1("Conclusions"),
   p("Given the choice of looking at Amazon, Apple, or Microsoft's stock data,
     it is easy to see the trends of stock prices during and after the Great
     Recession of 2007-2009. There is the option to choose a specific company, or
@@ -196,7 +196,7 @@ tab4 <- tabPanel(
       align = 'center'
     )
   ),
-  h2("Conclusions"),
+  h1("Conclusions"),
   p("From our data we can clearly see a positive correlation between COVID
   cases, and share price. Interestingly, if we isolate the prices during
   the California lockdowns, we observe the steepest upwards slope, indicating
