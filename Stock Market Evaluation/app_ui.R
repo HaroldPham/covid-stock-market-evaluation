@@ -200,8 +200,11 @@ tab5 <- tabPanel(
     of who and where should we be allocating our resources to the most?"),
   h1("Take Aways"),
   p("All in all, what can be said about large companies comes down to this: During any event, catastrophic or casual, whether
-    they rise or fall or even stay steady, they will always come back after the event with full power and rise. What this statement
-    tells us ")
+    they rise or fall or even stay steady, they will always come back after the event with full power and rise. What this
+    whole analysis tells us about smaller companies on the other hand is that with larger companies being so flexible with their
+    rise and falls of stocks, smaller companies may not have that kind of reaction these events, and will most likely be on the
+    falling side. That is why we suggest that the focus during such events should not be allocating resources to larger
+    more renouned companies, but rather the smaller businesses that are making significantly less than them.")
 )
 
 
