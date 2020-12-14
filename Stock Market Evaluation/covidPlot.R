@@ -14,7 +14,7 @@ amazoncombined <- inner_join(covid, select(amazon, Close, Date), by = "Date") %>
 msoftcombined <- inner_join(covid, select(msoft, Close, Date), by = "Date") %>% mutate(company = "Microsoft")
 applecombined <- inner_join(covid, select(apple, Close, Date), by = "Date") %>% mutate(company = "Apple")
 
-combined  <- bind_rows(amazoncombined, msoftcombined, applecombined)
+combined  <- bind_rows(amazoncombined, msoftcombined, applecombined) %>% filter(Date < as.Date('2020-10-20'))
 
 covidPlotTable <- combined %>%
   mutate(appleprice = ifelse(company == "Apple", Close, NA), amazonprice = ifelse(company == "Amazon", Close, NA), microsoftprice = ifelse(company == "Microsoft", Close, NA) ) %>%
