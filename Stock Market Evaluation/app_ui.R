@@ -93,17 +93,23 @@ tab3 <- tabPanel(
     selectInput("company_data",
     "Company",
     choices = c("Amazon", "Apple", "Microsoft"),
-    selected= "Amazon")
-    ),
-  color_election_input <- selectInput(
-    "election_color",
-    label = "Color",
-    choices = list("Red" = "red", "Blue" = "blue", "Green" = "green")
+    selected= "Amazon"),
+  y_election_input <- selectInput(
+    "y_election_var",
+    label = "Y variable",
+    choices = colnames(election_amazon),
+    selected = "High"
   ),
+  size_election_point <- sliderInput(
+    "election_size",
+    label =  "size of points", min = 0.1, max = 1, value = .3
+  )
+  ),
+  mainPanel(
   plotlyOutput("electionplot"),
   p(""),
   p("When we are looking at these three companies of Amazon, Apple, and Microsoft
-    our group was trying to think about what observations could be made to do about the datasets for 
+    our group was trying to think about what observations could be made to do about the datasets for
     another visualization for our project. It turned out that we decided to look at another event that happened
     years after the Recession of 2007-08, the answer we came up with was the 2016
     Presidential Election between Democratic candidate Hillary Clinton and
@@ -118,11 +124,7 @@ tab3 <- tabPanel(
     as so many people were expecting it's hard to judge but for these big three markets,
     looking at present day of 2020 these three markets did fine after Trump's one and only
     term as president of the United States.")
-  )
-
-
-
-
+  ))
 
 tab4 <- tabPanel(
   strong("COVID-19 Effects on the Stock Market"), #The tab name
@@ -177,8 +179,8 @@ tab5 <- tabPanel(
   includeCSS("style.css"),
   h1("In Summary"),
   h2("The Great Recession"),
-  p("In this part of our analysis we compared our datasets during the time period of 2007 to 2009, which is known as 
-     America's largest economic downfall, the Great Recession. Looking at the data for 'highs' in all three datasets, the 
+  p("In this part of our analysis we compared our datasets during the time period of 2007 to 2009, which is known as
+     America's largest economic downfall, the Great Recession. Looking at the data for 'highs' in all three datasets, the
     Great Recession hindered the progression of the stock data and slowed its growth. The struggle of each line is noticeable
     up until 2009 when the recession ends. What happens after this event is the
      key that should be paid attention to, and it is that all the datasets start rising quickly and while Amazon and Apple
@@ -190,10 +192,10 @@ tab5 <- tabPanel(
      when they are compared to a normal upscale event such as the 2016 elections to see if there are any noticeable changes
      to our stock data and what that says about the companies behind them. "),
   h2("The Covid 19 Pandemic"),
-  p("In the case of our current pandemic and isolation, we decided that it was relevant to compare our datasets to the 
+  p("In the case of our current pandemic and isolation, we decided that it was relevant to compare our datasets to the
   current context of our society. During these times it is important to understand that not all businesses will be capable
-    of thriving or even staying stable. Yet, within our three datasets, it is shown that not only are Amazon, Apple, and 
-    Microsoft staying stable through this time, they are also growing steadily. Overall what can be said is that the 
+    of thriving or even staying stable. Yet, within our three datasets, it is shown that not only are Amazon, Apple, and
+    Microsoft staying stable through this time, they are also growing steadily. Overall what can be said is that the
     three large companies have managed to keep themselves well and will most likely keep growing as this pandemic
     drags on unless if some unforseen tragedies were to happen to them. Compared to smaller businesses that do not have all
     the resources to support their companies, they would not do as well as larger companies would, which brings the question

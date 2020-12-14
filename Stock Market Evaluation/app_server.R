@@ -114,7 +114,7 @@ server <- function(input, output) {
 
   #Election tab 3 plots
   output$electionplot <- renderPlotly({
-    title <- paste0("title")
+    title <- paste0(input$y_election_var, ' vs. Time')
 
     #Election plots
     if(input$company_data == "Amazon"){
@@ -153,7 +153,7 @@ server <- function(input, output) {
                     size = input$election_size,
                     color = "green") +
          aes(text = paste("Company:", Company)) +
-         labs(x = "Month", y = input@y_election_var, title = title)
+         labs(x = "Month", y = input$y_election_var, title = title)
      }
 
   })
