@@ -114,7 +114,7 @@ server <- function(input, output) {
 
   #Election tab 3 plots
   output$electionplot <- renderPlotly({
-    title <- paste0("title")
+    title <- paste0(input$y_election_var, ' vs. Time')
 
     #Election plots
     if(input$company_data == "Amazon"){
