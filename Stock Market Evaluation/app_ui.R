@@ -185,6 +185,7 @@ tab5 <- tabPanel(
     steadily grow, Microsoft stays in a consistent manner compared to the rest. With that said, it can be noted that these
     large companies, although having lost much during this recession, have all sprung back to life afterwards starting
     immediately after the recession ended, 2009."),
+  img(src = "sum1.PNG"),
   h2("The 2016 Election"),
   p("Unlike the last analysis, instead of comparing our datasets to a disastrous event, we've decided to look at what happens
      when they are compared to a normal upscale event such as the 2016 elections to see if there are any noticeable changes
