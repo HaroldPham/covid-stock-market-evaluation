@@ -103,19 +103,19 @@ tab3 <- tabPanel(
   plotlyOutput("electionplot"),
   p(""),
   p("When we are looking at these three companies of Amazon, Apple, and Microsoft
-    out group was trying to think what observations we can make to do another visualization
-    for our project? It turned out we decided to look at another event that happened
+    our group was trying to think about what observations could be made to do about the datasets for 
+    another visualization for our project. It turned out that we decided to look at another event that happened
     years after the Recession of 2007-08, the answer we came up with was the 2016
-    Presidential Election between Democratic candidate Hilaryly Clinton and
+    Presidential Election between Democratic candidate Hillary Clinton and
     Republican Candidate Donald Trump. During this year tensions were high from
-    the stock market heading into the election day, then night when it was
+    the stock market heading into the election day, then when the night came when it was
     announced that Trump would win the presidency and be the 45th president of
-    the United States of America. The only company from the three would be considered
-    the biggest loser of the three was Amazon. Losing about 80 dollars after the
-    second week of the election, but gain its losses back in the matter of months.
-    The saying goes if ifs and buts were candy and nuts we would all have a merry christmas
-    well the if remains what would have happened if Hilarly Clinton were to win the election
-    as so many people were expecting it's hard to judge but for the big these big three marktes,
+    the United States of America. The only company of the three datasets that would be considered
+    the biggest loss was Amazon, losing about 80 dollars after the
+    second week of the election, but gaining its losses back in a matter of months.
+    The saying goes, 'if ifs and buts were candy and nuts we would all have a merry christmas'
+    well the 'if' remains: What would have happened if Hillary Clinton were to win the election
+    as so many people were expecting it's hard to judge but for these big three markets,
     looking at present day of 2020 these three markets did fine after Trump's one and only
     term as president of the United States.")
   )
@@ -161,10 +161,10 @@ tab4 <- tabPanel(
   ),
   h1("Conclusions"),
   p("From our data we can clearly see a positive correlation between COVID
-  cases, and share price. Interestingly, the if we isolate the prices during
+  cases, and share price. Interestingly, if we isolate the prices during
   the California lockdowns, we observe the steepest upwards slope, indicating
    that lockdown periods seem to drive up share prices as well. This makes
-   sense for a company like Amaazon becuase people are forced to stay home
+   sense for a company like Amazon because people are forced to stay home
    during the pandemic, and so they are more likely to have things delivered.
     To summarize, all of our companies showed a positive correlation with the
     number of COVID-19 cases, which should lead us to view this data in context,
@@ -174,17 +174,36 @@ tab4 <- tabPanel(
 
 tab5 <- tabPanel(
   strong("Summary"), #The tab name
-  includeCSS("style2.css"),
+  includeCSS("style.css"),
   h1("In Summary"),
   h2("The Great Recession"),
-  p(),
+  p("In this part of our analysis we compared our datasets during the time period of 2007 to 2009, which is known as 
+     America's largest economic downfall, the Great Recession. Looking at the data for 'highs' in all three datasets, the 
+    Great Recession hindered the progression of the stock data and slowed its growth. The struggle of each line is noticeable
+    up until 2009 when the recession ends. What happens after this event is the
+     key that should be paid attention to, and it is that all the datasets start rising quickly and while Amazon and Apple
+    steadily grow, Microsoft stays in a consistent manner compared to the rest. With that said, it can be noted that these
+    large companies, although having lost much during this recession, have all sprung back to life afterwards starting
+    immediately after the recession ended, 2009."),
   h2("The 2016 Election"),
-  p(),
+  p("Unlike the last analysis, instead of comparing our datasets to a disastrous event, we've decided to look at what happens
+     when they are compared to a normal upscale event such as the 2016 elections to see if there are any noticeable changes
+     to our stock data and what that says about the companies behind them. "),
   h2("The Covid 19 Pandemic"),
-  p(),
+  p("In the case of our current pandemic and isolation, we decided that it was relevant to compare our datasets to the 
+  current context of our society. During these times it is important to understand that not all businesses will be capable
+    of thriving or even staying stable. Yet, within our three datasets, it is shown that not only are Amazon, Apple, and 
+    Microsoft staying stable through this time, they are also growing steadily. Overall what can be said is that the 
+    three large companies have managed to keep themselves well and will most likely keep growing as this pandemic
+    drags on unless if some unforseen tragedies were to happen to them. Compared to smaller businesses that do not have all
+    the resources to support their companies, they would not do as well as larger companies would, which brings the question
+    of who and where should we be allocating our resources to the most?"),
   h1("Take Aways"),
-  p()
+  p("All in all, what can be said about large companies comes down to this: During any event, catastrophic or casual, whether
+    they rise or fall or even stay steady, they will always come back after the event with full power and rise. What this statement
+    tells us ")
 )
+
 
 #The UI Display Section (Add widgets/variables here)
 ui <- navbarPage(
