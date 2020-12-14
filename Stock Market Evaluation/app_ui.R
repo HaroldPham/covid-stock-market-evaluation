@@ -197,6 +197,7 @@ tab5 <- tabPanel(
      when they are compared to a normal upscale event such as the 2016 elections to see if there are any noticeable changes
      to our stock data and what that says about the companies behind them. In this case it looked like Amazon had large stock
     market losses at the beginning of the election and proceeded to regain it all back in a matter of months."),
+  img(src = "sum4.PNG"),
   h2("The Covid 19 Pandemic"),
   p("In the case of our current pandemic and isolation, we decided that it was relevant to compare our datasets to the
   current context of our society. During these times it is important to understand that not all businesses will be capable
