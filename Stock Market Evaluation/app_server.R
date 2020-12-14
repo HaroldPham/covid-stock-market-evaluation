@@ -1,7 +1,7 @@
 library(dplyr)
 library(shiny)
 library(plotly)
-source('testPlots.R')
+source('covidPlot.R')
 
 # render csv data files
 amazon <- read.csv("data/AMZN.csv")
@@ -87,29 +87,25 @@ server <- function(input, output) {
     }
   })
 
-  output$mainTable <- DT::renderDataTable({displayTable}, selection = 'single', options = list(searching = FALSE, lengthChange = FALSE))
+  output$mainTable <- DT::renderDataTable({covidPlotTable}, selection = 'single', options = list(searching = FALSE, lengthChange = FALSE))
 
   output$covidPlot <- renderPlot({
     selectedRows <- input$mainTable_rows_selected
 
     if(input$lockdowns){
       lockdownDates <- combined %>% filter(Date > as.Date('2020-3-19')) %>% filter(Date < as.Date('2020-5-4'))
-      chart2 <- chart2 + geom_point(data = lockdownDates, aes(x = cases, y = Close), size = 3, color = '#54ffeb')
+      covidPlot <- covidPlot + geom_point(data = lockdownDates, aes(x = cases, y = Close), size = 3, color = '#54ffeb')
     }
 
     if(length(selectedRows)){
       mainDate <- as.Date(combined[selectedRows[[1]], 1])
       toPlot <- combined %>% filter(as.Date(Date) == mainDate)
-      chart2 <- chart2 + geom_point(data = toPlot, aes(x = cases, y = Close), color = "#ab82d9", size = 5) +
+      covidPlot <- covidPlot + geom_point(data = toPlot, aes(x = cases, y = Close), color = "#ab82d9", size = 4) +
         geom_vline(aes(xintercept = combined[selectedRows[[1]], 2]), color = "#ab82d9", size = 2)
 
     }
-    chart2
+    covidPlot
     })
-
-
-
-
 
 
   #Election tab 3 plots
@@ -117,7 +113,7 @@ server <- function(input, output) {
     title <- paste0(input$y_election_var, ' vs. Time')
 
     #Election plots
-    if(input$company_data == "Amazon"){
+    if(input$company_data2 == "Amazon"){
       amzn_election_plot <- ggplot(election_amazon) +
         geom_point(mapping = aes_string(x = election_amazon$Date, y = input$y_election_var),
                    size = input$election_size,
@@ -125,7 +121,7 @@ server <- function(input, output) {
         aes(text = paste("company:", Company)) +
         labs(x = "Month", y = input$y_election_var, title = title)
      ggplotly(amzn_election_plot)
-    } else if(input$company_data == "Apple"){
+    } else if(input$company_data2 == "Apple"){
        apple_election_plot <- ggplot(election_apple) +
          geom_point(mapping = aes_string(x = election_apple$Date, y = input$y_election_var),
                      size = input$election_size,
@@ -133,28 +129,15 @@ server <- function(input, output) {
          aes(text = paste("Company:", Company)) +
          labs(x = "Month", y = input$y_election_var, title = title)
        ggplotly(apple_election_plot)
-    } else if(input$company_data == "Micrsoft"){
+    } else if(input$company_data2 == "Microsoft"){
        msoft_election_plot <- ggplot(election_msoft) +
          geom_point(mapping = aes_string(x = election_msoft$Date, y = input$y_election_var),
                     size = input$election_size,
-                    color = "green")
-       aes(text = paste("Company:", Company)) +
-         labs(x = "Month", y = input$y_election_var, title = title)
-       ggplotly(msoft_election_plot)
-    } else if(input$company_data == "All Three"){
-       all_election_data <- ggplot() +
-         geom_point(mapping = aes_string(x = election_amazon$Date, y = input$y_election_var),
-                    size = input$election_size,
-                    color = "orange") +
-         geom_point(mapping = aes_string(x = election_apple$Date, y = input$y_election_var),
-                    size = input$election_size,
-                    color = "blue") +
-         geom_point(mapping = aes_string(x = election_msoft$Date, y = input$y_election_var),
-                    size = input$election_size,
-                    color = "green") +
+                    color = "red") +
          aes(text = paste("Company:", Company)) +
          labs(x = "Month", y = input$y_election_var, title = title)
-     }
+       ggplotly(msoft_election_plot)
+    }
 
   })
 }

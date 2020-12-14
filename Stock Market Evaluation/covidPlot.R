@@ -16,14 +16,14 @@ applecombined <- inner_join(covid, select(apple, Close, Date), by = "Date") %>% 
 
 combined  <- bind_rows(amazoncombined, msoftcombined, applecombined)
 
-displayTable <- combined %>%
+covidPlotTable <- combined %>%
   mutate(appleprice = ifelse(company == "Apple", Close, NA), amazonprice = ifelse(company == "Amazon", Close, NA), microsoftprice = ifelse(company == "Microsoft", Close, NA) ) %>%
   group_by(Date) %>%
   summarise(Cases = cases, Apple = sum(appleprice, na.rm = TRUE), Amazon = sum(amazonprice, na.rm = TRUE), Microsoft = sum(microsoftprice, na.rm = TRUE)) %>%
   distinct()
 
 
-chart2 <- (ggplot(data = combined) +
+covidPlot <- (ggplot(data = combined) +
   geom_point(aes(x = cases, y = Close, color = company), size = 2.5) +
   geom_smooth(method = 'lm', aes(x = cases, y = Close, color = company), se = FALSE) +
   facet_grid(company~., scales = "free") +

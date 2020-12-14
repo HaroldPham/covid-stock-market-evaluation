@@ -28,7 +28,7 @@ tab1 <- tabPanel(
   img(src = "https://images.assetsdelivery.com/compings_v2/bluebay/bluebay1511/bluebay151100019.jpg"),
 
   tags$h1("Data Collection Methods"),
-  tags$p("The companies we've decided to choose for our project are ",a("Microsoft",href = "https://finance.yahoo.com/quote/MSFT/history?period1=1167609600&period2=1604793600&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true")
+  tags$p("The companies we've decided to choose for our project are ", a("Microsoft", href = "https://finance.yahoo.com/quote/MSFT/history?period1=1167609600&period2=1604793600&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true")
     ,", ",a("Apple",href = "https://finance.yahoo.com/quote/AAPL/history?period1=1167609600&period2=1605052800&interval=1wk&filter=history&frequency=1wk&includeAdjustedClose=true"),
     ", and ",a("Amazon",href = "https://finance.yahoo.com/quote/AMZN/history?period1=1264032000&period2=1603238400&interval=1d&filter=history&frequency=1d&includeAdjustedClose=true"),
     ". The reason for this is because
@@ -89,11 +89,11 @@ tab3 <- tabPanel(
   includeCSS("style.css"),
   h1("During 2016, were there any effects from the 2016 election?"),
 
-  Election_input <- sidebarPanel(
-    selectInput("company_data",
-    "Company",
+  election_input <- sidebarPanel(
+  company_input <- selectInput(inputId = "company_data2",
+    label = "Company",
     choices = c("Amazon", "Apple", "Microsoft"),
-    selected= "Amazon"),
+    selected = "Amazon"),
   y_election_input <- selectInput(
     "y_election_var",
     label = "Y variable",
@@ -130,7 +130,8 @@ tab4 <- tabPanel(
   strong("COVID-19 Effects on the Stock Market"), #The tab name
   includeCSS("style.css"),
 
-    h1("Question Statement"),
+    h1("Did Amazon, Apple, and Microsoft benefit from the COVID-19 Pandemic,
+      and its Effects?"),
     p("The next question we are asking regarding our data is this: what effect
       did the COVID-19 pandemic have on our three companies. This question is
       important in a global context due to the the vast amounts of power these
@@ -139,6 +140,7 @@ tab4 <- tabPanel(
       be reasonable to tax them more heavily, and use that money towards cure
       research, or towards relief packages for the many people displaced by the
       pandemic. "),
+      h2("Interactive Plot"),
     fluidRow(
       column(8, offset = 2, align = 'center',
         h4(strong("Click on a row in the table to highlight it on the graph. Click
@@ -161,7 +163,7 @@ tab4 <- tabPanel(
       align = 'center'
     )
   ),
-  h1("Conclusions"),
+  h2("Conclusions"),
   p("From our data we can clearly see a positive correlation between COVID
   cases, and share price. Interestingly, if we isolate the prices during
   the California lockdowns, we observe the steepest upwards slope, indicating
