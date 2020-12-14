@@ -85,7 +85,7 @@ tab2 <- tabPanel(
 )
 
 tab3 <- tabPanel(
-  "Effects from the 2016 Election.", #The tab name
+  strong("Effects from the 2016 Election."), #The tab name
   includeCSS("style.css"),
   h1("During 2016, were there any effects from the 2016 election?"),
 
@@ -107,7 +107,7 @@ tab3 <- tabPanel(
   ),
   mainPanel(
   plotlyOutput("electionplot"),
-  p(""),
+  h1("Conclusions"),
   p("When we are looking at these three companies of Amazon, Apple, and Microsoft
     our group was trying to think about what observations could be made to do about the datasets for
     another visualization for our project. It turned out that we decided to look at another event that happened
@@ -187,10 +187,14 @@ tab5 <- tabPanel(
     steadily grow, Microsoft stays in a consistent manner compared to the rest. With that said, it can be noted that these
     large companies, although having lost much during this recession, have all sprung back to life afterwards starting
     immediately after the recession ended, 2009."),
+  img(src = "sum1.PNG"),
+  img(src = "sum2.PNG"),
+  img(src = "sum3.PNG"),
   h2("The 2016 Election"),
   p("Unlike the last analysis, instead of comparing our datasets to a disastrous event, we've decided to look at what happens
      when they are compared to a normal upscale event such as the 2016 elections to see if there are any noticeable changes
-     to our stock data and what that says about the companies behind them. "),
+     to our stock data and what that says about the companies behind them. In this case it looked like Amazon had large stock
+    market losses at the beginning of the election and proceeded to regain it all back in a matter of months."),
   h2("The Covid 19 Pandemic"),
   p("In the case of our current pandemic and isolation, we decided that it was relevant to compare our datasets to the
   current context of our society. During these times it is important to understand that not all businesses will be capable
@@ -200,6 +204,7 @@ tab5 <- tabPanel(
     drags on unless if some unforseen tragedies were to happen to them. Compared to smaller businesses that do not have all
     the resources to support their companies, they would not do as well as larger companies would, which brings the question
     of who and where should we be allocating our resources to the most?"),
+  img(src = "sum5.PNG"),
   h1("Take Aways"),
   p("All in all, what can be said about large companies comes down to this: During any event, catastrophic or casual, whether
     they rise or fall or even stay steady, they will always come back after the event with full power and rise. What this

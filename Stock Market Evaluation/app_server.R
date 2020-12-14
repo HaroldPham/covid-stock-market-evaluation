@@ -139,7 +139,7 @@ server <- function(input, output) {
                     size = input$election_size,
                     color = "green")
        aes(text = paste("Company:", Company)) +
-         labs(x = "Month", y = input@y_election_var, title = title)
+         labs(x = "Month", y = input$y_election_var, title = title)
        ggplotly(msoft_election_plot)
     } else if(input$company_data == "All Three"){
        all_election_data <- ggplot() +
