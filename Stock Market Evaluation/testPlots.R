@@ -36,5 +36,9 @@ chart2 <- (ggplot(data = combined) +
     panel.grid.major = element_line(color = "#c7c7c7"),
     panel.background = element_rect(fill = '#ffefd5', color = '#ffefd5'),
     plot.background = element_rect(fill = '#ffefd5', color = '#ffefd5'),
-    text = element_text(family = "roboto",face = "bold"))
+    text = element_text(family = "roboto",face = "bold"),
+    axis.title = element_text(size = 18),
+    axis.text = element_text(size = 13),
+    plot.title = element_text(size = 22)
+    )
 )

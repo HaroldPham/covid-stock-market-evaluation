@@ -88,19 +88,20 @@ tab3 <- tabPanel(
   "Effects from the 2016 Election.", #The tab name
   includeCSS("style.css"),
   h1("During 2016, were there any effects from the 2016 election?"),
-  sidebarPanel(
-    selectInput(
-    "company_data",
+
+  Election_input <- sidebarPanel(
+    selectInput("company_data",
     "Company",
     choices = c("Amazon", "Apple", "Microsoft"),
     selected= "Amazon")
     ),
-  selectInput(
+  color_election_input <- selectInput(
     "election_color",
     label = "Color",
     choices = list("Red" = "red", "Blue" = "blue", "Green" = "green")
   ),
   plotlyOutput("electionplot"),
+  p(""),
   p("When we are looking at these three companies of Amazon, Apple, and Microsoft
     out group was trying to think what observations we can make to do another visualization
     for our project? It turned out we decided to look at another event that happened
@@ -126,6 +127,7 @@ tab3 <- tabPanel(
 tab4 <- tabPanel(
   strong("COVID-19 Effects on the Stock Market"), #The tab name
   includeCSS("style.css"),
+
     h1("Question Statement"),
     p("The next question we are asking regarding our data is this: what effect
       did the COVID-19 pandemic have on our three companies. This question is
@@ -135,26 +137,39 @@ tab4 <- tabPanel(
       be reasonable to tax them more heavily, and use that money towards cure
       research, or towards relief packages for the many people displaced by the
       pandemic. "),
-      h1("Conclusions"),
-      p("From our data we can clearly see a positive correlation between COVID
-      cases, and share price. Interestingly, the if we isolate the prices during
-      the California lockdowns, we observe the steepest upwards slope, indicating
-       that lockdown periods seem to drive up share prices as well. This makes
-       sense for a company like Amaazon becuase people are forced to stay home
-       during the pandemic, and so they are more likely to have things delivered.
-        To summarize, all of our companies showed a positive correlation with the
-        number of COVID-19 cases, which should lead us to view this data in context,
-        and examine the people it affects negatively, such as Amazon warehouse workers."),
+    fluidRow(
+      column(8, offset = 2, align = 'center',
+        h4(strong("Click on a row in the table to highlight it on the graph. Click
+          the checkbox to highlight the days that California was under a
+          shelter-in-place order."))
+      )
+    ),
   fluidRow(
-    column(6,
-      plotOutput("covidPlot"),
+    column(8, offset = 2,
       checkboxInput(inputId = "lockdowns",
         label = "Shade Lockdowns in California",
         value = FALSE),
+      plotOutput("covidPlot", width = "90%"),
       align = 'center'
-    ),
-    column(6, dataTableOutput("mainTable"))
-  )
+    )
+  ),
+  fluidRow(
+    column(8, offset = 2,
+      dataTableOutput("mainTable"),
+      align = 'center'
+    )
+  ),
+  h1("Conclusions"),
+  p("From our data we can clearly see a positive correlation between COVID
+  cases, and share price. Interestingly, the if we isolate the prices during
+  the California lockdowns, we observe the steepest upwards slope, indicating
+   that lockdown periods seem to drive up share prices as well. This makes
+   sense for a company like Amaazon becuase people are forced to stay home
+   during the pandemic, and so they are more likely to have things delivered.
+    To summarize, all of our companies showed a positive correlation with the
+    number of COVID-19 cases, which should lead us to view this data in context,
+    and examine the people it affects negatively, such as Amazon warehouse workers.")
+
 )
 
 tab5 <- tabPanel(

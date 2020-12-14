@@ -5,8 +5,8 @@ account: gavinpereira
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 3391393
-bundleId: 3981960
+bundleId: 3982585
 url: https://gavinpereira.shinyapps.io/StockMarketEvaluation/
-when: 1607847371.47783
+when: 1607859868.63247
 asMultiple: FALSE
 asStatic: FALSE
