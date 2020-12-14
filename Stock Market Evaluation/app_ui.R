@@ -186,6 +186,8 @@ tab5 <- tabPanel(
     large companies, although having lost much during this recession, have all sprung back to life afterwards starting
     immediately after the recession ended, 2009."),
   img(src = "sum1.PNG"),
+  img(src = "sum2.PNG"),
+  img(src = "sum3.PNG"),
   h2("The 2016 Election"),
   p("Unlike the last analysis, instead of comparing our datasets to a disastrous event, we've decided to look at what happens
      when they are compared to a normal upscale event such as the 2016 elections to see if there are any noticeable changes
@@ -199,6 +201,7 @@ tab5 <- tabPanel(
     drags on unless if some unforseen tragedies were to happen to them. Compared to smaller businesses that do not have all
     the resources to support their companies, they would not do as well as larger companies would, which brings the question
     of who and where should we be allocating our resources to the most?"),
+  img(src = "sum5.PNG"),
   h1("Take Aways"),
   p("All in all, what can be said about large companies comes down to this: During any event, catastrophic or casual, whether
     they rise or fall or even stay steady, they will always come back after the event with full power and rise. What this
